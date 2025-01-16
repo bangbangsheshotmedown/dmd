@@ -4419,6 +4419,10 @@ private extern(C++) class AddMemberVisitor : Visitor
             else
                 m.versionlevel = vs.level;
         }
+        if (global.params.v.versions)
+        {
+            message(vs.loc, "`%s` is used as a version condition", vs.toChars());
+        }
     }
 
     override void visit(Nspace ns)

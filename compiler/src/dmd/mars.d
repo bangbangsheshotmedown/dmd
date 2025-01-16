@@ -973,6 +973,8 @@ bool parseCommandLine(const ref Strings arguments, const size_t argc, ref Param 
             driverParams.vasm = true;
         else if (arg == "-vtls") // https://dlang.org/dmd.html#switch-vtls
             params.v.tls = true;
+        else if (arg == "-vversions")
+            params.v.versions = true;
         else if (startsWith(p + 1, "vtemplates")) // https://dlang.org/dmd.html#switch-vtemplates
         {
             params.v.templates = true;
