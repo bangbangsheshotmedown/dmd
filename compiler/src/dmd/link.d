@@ -1178,6 +1178,10 @@ public int runPreprocessor(Loc loc, const(char)[] cpp, const(char)[] filename, c
             argv.push("-include");
             argv.push(importc_h);
         }
+
+        if (verbose == false) 
+            argv.push("-P");
+
         argv.push(null);                    // argv[] always ends with a null
 
         if (verbose)
